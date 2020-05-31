@@ -1,0 +1,27 @@
+# Messages configuration for Banker+ plugin created by Horizon
+# Messages Version: 1.0.0
+
+# Prefix that proceeds all messages.
+prefix: "&eBanker+ &8> "
+
+# Message to be sent upon not having the required permissions.
+no-permission: "&cYou do not have permission to execute that action!"
+
+# Message to be sent upon deposit.
+# variables: {AMOUNT} - amount deposited. {BALANCE} - new bank balance.
+deposit: "&aYou have successfully deposited &6{AMOUNT}&a! Bank Balance: &e${BALANCE}"
+
+# Message to be sent upon failure of deposit due to lack of money.
+# variables - {AMOUNT} - amount attempted to be deposited. {BALANCE} - current vault balance.
+deposit-failure: "&cYou do not have &e${AMOUNT} &cto deposit! Vault Balance: &e${BALANCE}"
+
+# Message to best upon withdraw of money.
+# variables: {AMOUNT} - amount withdrawn. {BALANCE} - new bank balance.
+withdraw: "&aYou have successfully withdrawn &6{AMOUNT}&a! Bank Balance: &e${BALANCE}"
+
+# Message to be sent upon failure of withdraw due to lack of money.
+# variables - {AMOUNT} - amount attempted to be withdrawn. {BALANCE} - current bank balance.
+withdraw-failure: "&cYou do not have &e${AMOUNT} &cto withdraw! Bank Balance: &e${BALANCE}"
+
+
+

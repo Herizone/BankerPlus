@@ -1,0 +1,7 @@
+# Banker+ Settings
+
+# Possible values: HOURLY, DAILY, WEEKLY
+interest-frequency: "DAILY"
+
+# Possible values: x <= 100 (values can have decimals)
+interest-rate: 5

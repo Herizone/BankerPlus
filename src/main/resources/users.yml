@@ -1,0 +1,4 @@
+# User data storage. It's stored under the 'users' subsection.
+# It's then stored as uuid: balance, so if you want to alter
+# someone's bank balance, find their UUID, and change the
+# number, then run /banker reload
