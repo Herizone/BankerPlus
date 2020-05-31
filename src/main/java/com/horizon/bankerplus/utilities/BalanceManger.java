@@ -19,8 +19,10 @@ public class BalanceManger {
         if (amount <= BankerPlus.getEconomy().getBalance(player)) {
             if (BankerPlus.getInstance().getUsersConfig().getConfig().contains("users." + player.getUniqueId())) {
                 BankerPlus.getInstance().getUsersConfig().set("users." + player.getUniqueId(), BankerPlus.getInstance().getUsersConfig().getConfig().getDouble("users." + player.getUniqueId()) + amount);
+                BankerPlus.getEconomy().withdrawPlayer(player, amount);
             } else {
                 BankerPlus.getInstance().getUsersConfig().set("users." + player.getUniqueId(), amount);
+                BankerPlus.getEconomy().withdrawPlayer(player, amount);
             }
             return Messages.DEPOSIT.getMessage(new Replacement("{AMOUNT}", "" + amount), new Replacement("{BALANCE}", "" + getBalance(player.getUniqueId())));
         }
@@ -31,8 +33,10 @@ public class BalanceManger {
         if (amount <= getBalance(player.getUniqueId())) {
             if (BankerPlus.getInstance().getUsersConfig().getConfig().contains("users." + player.getUniqueId())) {
                 BankerPlus.getInstance().getUsersConfig().set("users." + player.getUniqueId(), BankerPlus.getInstance().getUsersConfig().getConfig().getDouble("users." + player.getUniqueId()) - amount);
+                BankerPlus.getEconomy().depositPlayer(player, amount);
             } else {
                 BankerPlus.getInstance().getUsersConfig().set("users." + player.getUniqueId(), amount);
+                BankerPlus.getEconomy().depositPlayer(player, amount);
             }
             return Messages.WITHDRAW.getMessage(new Replacement("{AMOUNT}", "" + amount), new Replacement("{BALANCE}", "" + getBalance(player.getUniqueId())));
         }
