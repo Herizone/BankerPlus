@@ -3,3 +3,8 @@ version: @version@
 main: com.horizon.bankerplus.BankerPlus
 authors: [Horion, yakovliam]
 description: BankerPlus Bukkit plugin
+
+commands:
+  bank:
+    usage: /bank
+    description: Use the Banker+ GUI

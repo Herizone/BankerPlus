@@ -1,4 +1,4 @@
-package com.horizon.bankerplus.utilities;
+package com.horizon.bankerplus.utilities.items;
 
 import com.google.common.base.Enums;
 import com.google.common.cache.Cache;

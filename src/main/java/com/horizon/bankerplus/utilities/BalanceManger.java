@@ -1,6 +1,7 @@
 package com.horizon.bankerplus.utilities;
 
 import com.horizon.bankerplus.BankerPlus;
+import com.horizon.bankerplus.utilities.chat.Messages;
 import org.bukkit.entity.Player;
 
 import java.util.UUID;

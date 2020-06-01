@@ -33,10 +33,24 @@ dependencies {
     // Lombok
     compileOnly 'org.projectlombok:lombok:1.18.12'
     annotationProcessor 'org.projectlombok:lombok:1.18.12'
+
+    // yako-core
+    compile fileTree(dir: 'libs', include: ['yakocoreapi-*.jar'])
 }
 
 processResources {
     from(sourceSets.main.resources.srcDirs) {
         filter ReplaceTokens, tokens: [version: version]
+    }
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'com.horizon.bankerplus.BankerPlus'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
 }
